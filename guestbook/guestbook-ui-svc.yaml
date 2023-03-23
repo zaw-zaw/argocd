@@ -9,7 +9,7 @@ status:
     ingress:
     - ip: 20.198.155.195
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 8081
+    targetPort: 8081
   selector:
     app: guestbook-ui
