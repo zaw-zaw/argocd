@@ -4,7 +4,10 @@ metadata:
   name: guestbook-ui
 spec:
   type: LoadBalancer
-  loadbalancerIP: 20.198.155.195
+status:
+  loadBalancer:
+    ingress:
+    - ip: 20.198.155.195
   ports:
   - port: 8080
     targetPort: 8080
