@@ -1,10 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    app.kubernetes.io/instance: guestbook
   name: guestbook-ui
+  namespace: guestbook
 spec:
+  loadBalancerIP: 20.198.155.195
+  type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 8081
   selector:
     app: guestbook-ui
